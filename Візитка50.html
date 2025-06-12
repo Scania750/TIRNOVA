@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Міжнародні перевезення | MudryonaAuto & Vakulenko</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚛</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      color: #f0f0f0;
+      background-color: #111;
+    }
+
+    .bg {
+      background-image: url('Volvo-Trucks-FH-Aero-Range-from-side-angle-2048x1045.jpg');
+      min-height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .content {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 1.6em;
+      color: #d0d0d0;
+    }
+
+    .highlighted {
+      font-size: 1.9em;
+      font-weight: 700;
+      color: #1e88e5;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    }
+
+    h3 {
+      margin-top: 25px;
+      font-size: 1.4em;
+      color: #ffffff;
+    }
+
+    p {
+      margin: 6px 0;
+      font-size: 1.05em;
+      color: #e0e0e0;
+    }
+
+    .contact {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #1e4f91;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1em;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #153865;
+      transform: scale(1.05);
+    }
+
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1em;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    a {
+      color: #66b3ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .swiper {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      margin: 0 auto 40px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .fade-in-delay {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 0.3s;
+      animation-fill-mode: forwards;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
+
+      .swiper {
+        height: 250px;
+      }
+    }
+
+    .language-switcher {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .lang-btn {
+      background-color: transparent;
+      border: 2px solid #1e88e5;
+      color: #1e88e5;
+      padding: 8px 16px;
+      margin: 0 8px;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .lang-btn:hover {
+      background-color: #1e88e5;
+      color: #fff;
+    }
+
+    .job-label {
+  color: #1e88e5;
+  font-weight: 700;
+  margin-right: 6px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+  </style>
+</head>
+<body>
+  <div class="bg">
+    <div class="content fade-in" id="main-content">
+      <!-- Контент буде перекладатися тут -->
+      <div id="site-content">
+       <h1 style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 120px; letter-spacing: 15px; color: #fff; text-align: center; margin: 0; text-shadow: 0 0 1px #fff, 0 0 2px #fff, 1px 1px 1px #000;">
+  TIRNOVA
+</h1>
+
+        <p style="text-align: center;">
+  Ми — транспортна компанія, яка спеціалізується на міжнародних перевезеннях.
+</p>
+
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="imag1.jpg" alt="Зображення 1" /></div>
+            <div class="swiper-slide"><img src="imag2.jpg" alt="Зображення 2" /></div>
+            <div class="swiper-slide"><img src="imag3.jpg" alt="Зображення 3" /></div>
+            <div class="swiper-slide"><img src="imag4.jpg" alt="Зображення 4" /></div>
+            <div class="swiper-slide"><img src="imag5.jpg" alt="Зображення 5" /></div>
+            <div class="swiper-slide"><img src="imag6.jpg" alt="Зображення 6" /></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="contact">
+          <h2 class="highlighted" style="text-align: center;">ТОВ "МУДРЬОНА АВТО"</h2>
+          <p><strong>Адреса:</strong> Київ, Україна</p>
+          <p><strong>📞 Телефон:</strong> +380 (96) 347 13 53</p>
+          <p><strong>Email:</strong> <a href="mailto:mudryonaauto@gmail.com">mudryonaauto@gmail.com</a></p>
+
+          <h2 class="highlighted" style="text-align: center;">ФОП Вакуленко Євгеній Володимирович</h2>
+          <p><strong>Адреса:</strong> Київ, Україна</p>
+          <p><strong>📞 Телефон:</strong> +380 (67) 916 56 09</p>
+          <p><strong>Email:</strong> <a href="mailto:Evgeniyvakulenko21@gmail.com">Evgeniyvakulenko21@gmail.com</a></p>
+
+          <h2>Переваги:</h2>
+          <p><strong>•  Власний автопарк</strong> — сучасні тягачі та причепи.</p>
+          <p><strong>•  Дотримання термінів</strong> — пунктуальна доставка без затримок.</p>
+          <p><strong>•  GPS-моніторинг</strong> — контроль руху в режимі реального часу.</p>
+          <p><strong>•  Досвід роботи з ЄС</strong> — знаємо всі тонкощі митниці, доріг та документообігу.</p>
+          <p><strong>•  Страхування вантажу</strong> — спокій за ваш товар.</p>
+
+          <a class="btn" href="mailto:mudryonaauto@gmail.com">Зв’язатися</a>
+
+          <form action="mailto:mudryonaauto@gmail.com" method="POST" enctype="text/plain">
+            <h2>Зворотній зв’язок</h2>
+            <input type="text" name="name" placeholder="Ваше ім'я" required />
+            <input type="email" name="email" placeholder="Email для відповіді" required />
+            <textarea name="message" rows="4" placeholder="Ваше повідомлення" required></textarea>
+            <button type="submit" class="btn">Надіслати</button>
+          </form>
+        </div>
+
+        <div class="job fade-in-delay" style="margin-top: 40px;">
+          <h2>Вакансії</h2>
+          <h3>ВОДІЙ ДАЛЕКОБІЙНИК (категорія CE)</h3>
+          <p><strong class="job-label">Обов’язки:</strong><br> Доставка вантажів по Європі та Україні.</p>
+          <p><strong class="job-label">Вимоги:</strong><br> Водійське посвідчення категорії CE, чіп-карта тахографа, досвід роботи від 1 року, розуміння супровідної документації, вміння стежити за технічним станом транспорту.</p>
+          <p><strong class="job-label">Умови:</strong><br> Офіційне працевлаштування, конкурентна заробітна плата. Власний автопарк з сучасними автомобілями Євро-6. Постійна завантаженість — власні вантажі, без простоїв.</p>
+          <a href="mailto:mudryonaauto@gmail.com?subject=Заявка на вакансію Водій Далекобійник" class="btn">Подати заявку</a>
+
+          <h3>ЛОГІСТ (Україна, Європа)</h3>
+          <p><strong class="job-label">Обов’язки:</strong><br> Організація міжнародних перевезень, взаємодія з клієнтами, керування власним автопарком. Ведення бази: документообіг, внесення та коригування інформації в CRM. Супровід рейсу від моменту завантаження до вивантаження. Оперативне вирішення проблем у процесі перевезень.</p>
+          <p><strong class="job-label">Вимоги:</strong><br> Досвід роботи в логістиці від 1 року. високий рівень комунікативних навичок, вміння працювати в режимі багатозадачності, здатність обробляти великі обсяги інформації, аналітичне мислення, уважність, організованість, націленість на результат. Знання іноземних мов не обов'язкове.</p>
+          <p><strong class="job-label">Умови:</strong><br> Стабільна заробітна плата. Робота в команді професіоналів, сучасні інструменти та CRM. Повна зайнятість, розвиток у сфері міжнародної логістики. Офіс у Києві.</p>
+          <a href="mailto:mudryonaauto@gmail.com?subject=Заявка на вакансію Логіст" class="btn">Подати заявку</a>
+        </div>
+      </div>
+
+      <div class="language-switcher">
+        <button class="lang-btn" onclick="setLanguage('uk')">UA</button>
+        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
+      },
+    });
+
+    const translations = {
+      uk: document.getElementById('site-content').innerHTML,
+      en: `
+        <h1>Reliable international freight transportation across Europe and Ukraine</h1>
+        <p>We are a transport company specializing in international cargo transportation.</p>
+        ${document.querySelector('.swiper').outerHTML}
+        <div class="contact">
+          <h2 class="highlighted">LLC "MUDRYONA AUTO"</h2>
+          <p><strong>Address:</strong> Kyiv, Ukraine</p>
+          <p><strong>📞 Phone:</strong> +380 (96) 347 13 53</p>
+          <p><strong>Email:</strong> <a href="mailto:mudryonaauto@gmail.com">mudryonaauto@gmail.com</a></p>
+          <h2 class="highlighted">Individual Entrepreneur Vakulenko Yevhenii</h2>
+          <p><strong>Address:</strong> Kyiv, Ukraine</p>
+          <p><strong>📞 Phone:</strong> +380 (67) 916 56 09</p>
+          <p><strong>Email:</strong> <a href="mailto:Evgeniyvakulenko21@gmail.com">Evgeniyvakulenko21@gmail.com</a></p>
+          <h2>Advantages:</h2>
+          <p><strong>• Own fleet</strong> — modern tractors and trailers.</p>
+          <p><strong>• On-time delivery</strong> — punctual without delays.</p>
+          <p><strong>• GPS monitoring</strong> — real-time tracking.</p>
+          <p><strong>• EU experience</strong> — we know customs, roads, and documentation.</p>
+          <p><strong>• Cargo insurance</strong> — peace of mind for your goods.</p>
+          <a class="btn" href="mailto:mudryonaauto@gmail.com">Contact Us</a>
+          <form action="mailto:mudryonaauto@gmail.com" method="POST" enctype="text/plain">
+            <h2>Feedback</h2>
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Reply email" required />
+            <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
+        <div class="job fade-in-delay" style="margin-top: 40px;">
+          <h2>Vacancies</h2>
+          <h3>Truck Driver</h3>
+          <p><strong>Duties:</strong> Transport of goods across Europe and Ukraine.</p>
+          <p><strong>Requirements:</strong> CE driver's license, tachograph card, at least 1 year of experience, understanding of documentation, ability to maintain the vehicle.</p>
+          <p><strong>Conditions:</strong> Official employment, competitive salary. Own fleet of Euro-6 vehicles. No downtime.</p>
+          <a href="mailto:mudryonaauto@gmail.com?subject=Driver Job Application" class="btn">Apply</a>
+          <h3>Logistics Manager</h3>
+          <p><strong>Duties:</strong> Organizing international freight transport, client communication.</p>
+          <p><strong>Requirements:</strong> 1+ year experience in logistics. Foreign languages are not required.</p>
+          <p><strong>Conditions:</strong> Official employment, office in Kyiv, friendly team.</p>
+          <a href="mailto:mudryonaauto@gmail.com?subject=Logistics Job Application" class="btn">Apply</a>
+        </div>`
+    };
+
+    function setLanguage(lang) {
+      document.getElementById('site-content').innerHTML = translations[lang];
+    }
+  </script>
+</body>
+</html>
